@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Add favicon (logo in the browser tab) -->
+    <link rel="icon" href="shine-website-logo0.png" type="image/png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./style 1.1.css">
+    <link rel="stylesheet" href="./feedback style.css ">
+    
+    <title>Shine Feedback</title>
+    <style>
+        /* Thank You Message Style */
+        #thankYouMessage {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(243, 159, 230, 0.8); /* Transparent color */
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            display: none; /* Initially hide the message */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="final-result">
+        <!-- Header: Navigation Bar -->
+        <div class="nav-bar-top">
+            <img class="shine-website-logo" src="./shine-website-logo0.png" alt="Shine Logo" />
+            <div class="shine-text">Shine</div>
+            <a href="./HomePage.php" class="home-link">
+              <div class="home-text">
+                  <div class="home">Home</div>
+              </div>
+              <img class="house-line" src="./house-line0.svg" />
+          </a>
+          
+      
+          </div>
+
+        <!-- Feedback Section -->
+        <div id="feedback-section" class="feedback-section">
+            <h2>Feedback Form</h2>
+            <p>Share your experience in scaling</p>
+
+            <!-- Form to submit feedback -->
+            <form id="feedbackForm" action="submit_feedback.php" method="POST">
+                <!-- Star Rating -->
+                <div class="stars">
+                    <input type="radio" id="star1" name="Rating" value="1">
+                    <label for="star1">★</label>
+                    <input type="radio" id="star2" name="Rating" value="2">
+                    <label for="star2">★</label>
+                    <input type="radio" id="star3" name="Rating" value="3">
+                    <label for="star3">★</label>
+                    <input type="radio" id="star4" name="Rating" value="4">
+                    <label for="star4">★</label>
+                    <input type="radio" id="star5" name="Rating" value="5">
+                    <label for="star5">★</label>
+                </div>
+        
+                <p>Add your review</p>
+                <input type="text" name="FeedbackText" id="feedbackText" placeholder="Write your review here" required>
+        
+                <!-- Buttons -->
+                <div class="buttons">
+                    <button type="submit" class="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer section -->
+        <div class="footer">
+
+            <!-- Terms, privacy, and copyright information -->
+            <div class="copyright">Copyright © 2024 Shine </div>
+            <img class="line-stroke" src="./line-stroke0.svg" />
+      
+            <!-- Quick links in the footer -->
+      
+            <a href="./About.html">
+            <div class="about">About</div>
+            </a>
+          
+            <a href="./Services.html">
+              <div class="services">Services</div>
+            </a>
+            <div class="quick-links">Quick Links</div>
+      
+            <!-- Contact information and social media links -->
+            <div class="facebook-email">shineWebsite@gmail.com</div>
+            <div class="facebook">Facebook</div>
+            <div class="email">shineWebsite@gmail.com</div>
+            <div class="email2">Email</div>
+            <div class="twitter-email">shineWebsite@gmail.com</div>
+            <div class="twitter">Twitter</div>
+            <div class="instagram-email">shineWebsite@gmail.com</div>
+            <div class="instagram">Instagram</div>
+            <div class="socials">Socials</div>
+      
+            <!-- Social media icons -->
+            <img class="socmed-instagram" src="./socmed-instagram0.svg" />
+            <img class="socmed-twitter" src="./socmed-twitter0.svg" />
+            <img class="socmed-facebook" src="./socmed-facebook0.svg" />
+      
+            <!-- Footer logo and text -->
+            <img class="footer-text" src="./footer-text0.svg" />
+            <img class="footer-logo" src="./footer-logo0.png" />
+          </div>
+    </div>
+   
+    <!-- Thank You Message -->
+    <div id="thankYouMessage">
+        Thank you for your feedback!
+    </div>
+
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+            // Get the selected rating and feedback text
+            const ratingSelected = document.querySelector('input[name="Rating"]:checked');
+            const feedbackText = document.getElementById("feedbackText").value.trim();
+
+            // Validate the inputs
+            if (!ratingSelected) {
+                alert("Please select a star rating.");
+                event.preventDefault(); // Prevent form submission
+                return;
+            }
+
+            // Validate feedback text (only allow letters and symbols)
+            const validTextPattern = /^[A-Za-z\s.,!?;()&-]*$/;
+            if (!validTextPattern.test(feedbackText)) {
+                alert("Feedback should only contain letters, spaces, and basic punctuation.");
+                event.preventDefault(); // Prevent form submission
+                return;
+            }
+
+            // Show the thank you message
+            document.getElementById("thankYouMessage").style.display = "block"; // Show message
+
+            // Prevent form submission for 2 seconds and redirect after 2 seconds
+            event.preventDefault();
+            setTimeout(function () {
+                document.getElementById("feedbackForm").submit(); // Submit form
+                setTimeout(function () {
+                    window.location.href = "homePage.html"; // Redirect to homepage after 5 seconds
+                }, 2000);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
+

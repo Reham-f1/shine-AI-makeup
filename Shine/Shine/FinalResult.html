@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Add favicon (logo in the browser tab) -->
+   <link rel="icon" href="shine-website-logo0.png" type="image/png">
+ 
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="./style 1.1.css">
+  <link rel="stylesheet" href="./FinalResult style.css">
+  
+  <title>Final Result Page</title>
+
+  <style>
+    /* Fullscreen Centered */
+    .circle-container {
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-70%, -20%);
+      width: 60px;
+      height: 60px;
+      z-index: 9999;
+    }
+
+    /* Circular Progress Animation */
+    @keyframes downloadProgress {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    /* Shrink and Disappear Animation */
+    @keyframes shrinkDisappear {
+      0% { transform: scale(1); }
+      100% { transform: scale(0); }
+    }
+
+    .progress-circle {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .progress-circle circle {
+      fill: none;
+      stroke: #4f125e;
+      stroke-width: 5;
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      stroke-linecap: round;
+      animation: downloadProgress 2.5s linear forwards, shrinkDisappear 0.5s 2.5s forwards;
+    }
+
+    #save-button {
+  position:absolute; /* Keeps it in place even when scrolling */
+  bottom: 10px; /* Distance from bottom */
+  left: 50%;
+  transform: translateX(-60%);
+  padding: 10px 20px;
+  background-color: #d2b2da;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000; /* Ensures it's above other elements */
+  display: none; /* Initially hidden */
+}
+
+#save-button:hover {
+  background-color: #c949e5;
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Circle Animation -->
+  <div class="circle-container">
+    <svg class="progress-circle" viewBox="0 0 36 36">
+      <circle cx="18" cy="18" r="16"></circle>
+    </svg>
+  </div>
+
+   <!-- Main Container -->
+  <div class="final-result">
+
+    <!-- Header: Navigation Bar -->
+    <div class="frame-1">
+    <!-- Placeholder Image -->
+      <!-- Result Picture (Processed Image or Placeholder Image) -->
+      <img 
+        class="image" 
+        id="placeholder-image" 
+        src="" 
+        
+      />
+    </div>
+
+     <!-- Star Image for Decoration -->
+    <img class="star-img" src="star-img0.svg" />
+
+
+
+    <!-- Provide Feedback Button -->
+   <a href="feedback.html" class="button-2">
+    <span class="provide-feedback">Provide Feedback</span>
+     </a>
+  
+      <!-- Try Again Button -->
+      
+        <a href="Fmodel/UploadPage-1.html" class="button-1">
+          <div class="try-again">Try Again</div>
+        </a>
+             
+    <!-- Decorative Elements -->
+    <img class="star-img2" src="star-img1.svg" />
+    <div class="final-result2">Final Result</div>
+
+    <!-- Display Processed Image -->
+    <div class="processed-image-container">
+      <img id="processed-image" src="" alt="Processed Image" />
+    </div>
+
+    <!-- Header: Navigation Bar -->
+    <div class="nav-bar-top">
+      <img class="shine-website-logo" src="shine-website-logo0.png" alt="Shine Logo" />
+      <div class="group-31">
+        <div class="home">Home</div>
+      </div>
+      <img class="house-line" src="house-line0.svg" alt="Home Icon" />
+      <a href="homePage.php" class="house-line"></a>
+      <div class="shine-text">Shine</div>
+
+      <a href="./feedback.html" class="feedback-link">
+        <div class="feedback-text">
+            <div class="feedback">feedback</div>
+        </div>
+        <img class="feedback-icon" src="./feedback-icons.svg" />
+    </a>
+    </div>
+
+    
+    <!-- Footer section -->
+    <div class="footer">
+
+      <!-- Terms, privacy, and copyright information -->
+      <div class="copyright">Copyright © 2024 Shine </div>
+      <img class="line-stroke" src="./line-stroke0.svg" />
+
+      <!-- Quick links in the footer -->
+
+      <a href="./About.html">
+      <div class="about">About</div>
+      </a>
+    
+      <a href="./Services.html">
+        <div class="services">Services</div>
+      </a>
+      <div class="quick-links">Quick Links</div>
+
+      <!-- Contact information and social media links -->
+      <div class="facebook-email">shineWebsite@gmail.com</div>
+      <div class="facebook">Facebook</div>
+      <div class="email">shineWebsite@gmail.com</div>
+      <div class="email2">Email</div>
+      <div class="twitter-email">shineWebsite@gmail.com</div>
+      <div class="twitter">Twitter</div>
+      <div class="instagram-email">shineWebsite@gmail.com</div>
+      <div class="instagram">Instagram</div>
+      <div class="socials">Socials</div>
+
+      <!-- Social media icons -->
+      <img class="socmed-instagram" src="./socmed-instagram0.svg" />
+      <img class="socmed-twitter" src="./socmed-twitter0.svg" />
+      <img class="socmed-facebook" src="./socmed-facebook0.svg" />
+
+      <!-- Footer logo and text -->
+      <img class="footer-text" src="./footer-text0.svg" />
+      <img class="footer-logo" src="./footer-logo0.png" />
+    </div>
+  </div>
+  
+  <!--<button id="save-button" style="display:none;">Save Image</button>
+  
+          // Show the Save button
+        const saveButton = document.getElementById('save-button');
+        saveButton.style.display = 'block';
+        saveButton.onclick = function() {
+            const link = document.createElement('a');
+            link.href = imagef;
+            link.download = 'processed_image.png'; // Set download file name
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+  
+  -->  
+
+
+  <!-- JavaScript to Fetch Processed Image -->
+  <script>
+function fetchProcessedImage() {
+    // Fetch the processed image from the Flask server
+    fetch('http://127.0.0.1:5000/get_processed_image')  // Modify this if needed based on the actual route
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch image, status code: ' + response.status);
+        }
+        return response.blob();  // Receive the image as a blob
+      })
+      .then(blob => {
+        const imageElement = document.getElementById('processed-image');
+        const imagef = URL.createObjectURL(blob);  // Create an object URL for the blob
+        const randomParam = Date.now();  // Use timestamp for randomness
+        imageElement.src = imagef + '?' + randomParam;  // Set the image source to the blob URL with random param
+        imageElement.style.display = 'block';  // Display the image
+
+         // Update the placeholder image to show the processed image
+        const placeholderImage = document.getElementById('placeholder-image');
+        placeholderImage.src = imagef;
+      })
+      .catch(error => {
+        console.error('Error fetching image:', error);
+      });
+    } 
+      setInterval(fetchProcessedImage, 2500);
+
+
+
+
+  </script>
+
+</body>
+</html>

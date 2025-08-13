@@ -1,0 +1,404 @@
+
+ /* Navigation bar */
+.nav-bar-top {
+  background: #cdc1ff;
+  border-style: solid;
+  border-color: #edf5ff;
+  border-width: 1px;
+  padding: 0px 73px 0px 73px;
+  width: 1565px;
+  height: 91px;
+  position: absolute;
+  left: -29px;
+  top: 0px;
+  overflow: hidden;
+}
+
+.shine-website-logo {
+  border-radius: 50%;
+  width: 82px;
+  height: 77px;
+  position: absolute;
+  left: 86px;
+  top: 7px;
+  object-fit: cover;
+}
+
+.shine-text {
+  color: var(--black, #1a202c);
+  text-align: center;
+  font-family: "Trochut-Regular";
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  position: absolute;
+  left: 194px;
+  top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.home {
+  color: var(--black, #1a202c);
+  text-align: left;
+  font-family: "PlusJakartaSans-SemiBold";
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  position: absolute;
+  left: 1340px;
+  top: 37px;
+  width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.house-line {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 1385px;
+  top: 30px;
+  overflow: visible;
+}
+
+.feedback {
+  color: var(--black, #1a202c);
+  text-align: left;
+  font-family: "PlusJakartaSans-SemiBold";
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  position: absolute;
+  left: 1428px;
+  top: 37px;
+  width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.feedback-icon {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 1490px;
+  top: 30px;
+  overflow: visible;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* Links (Terms and Privacy) hover effect */
+
+.terms-condition {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 600;
+  position: absolute;
+  left: 1205px;
+  top: 407px;
+  cursor: pointer;
+  
+}
+
+.privacy-policy {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 600;
+  position: absolute;
+  left: 1027px;
+  top: 407px;
+  cursor: pointer;
+  
+}
+
+
+.terms-condition:hover, .privacy-policy:hover {
+  color: rgba(247, 115, 115, 0.752); /* Changes color on hover */
+}
+
+/* Copyright text */
+.copyright {
+  color: #000000;
+  text-align: center;
+  font-family: "Montserrat-Light", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  position: absolute;
+  left: 95px;
+  top: 403px;
+}
+
+/* Horizontal line separator */
+.line-stroke {
+  width: 1320px;
+  height: 1px;
+  position: absolute;
+  left: 1380px;
+  top: 361px;
+  transform: translate(-1320px, -1px);
+  overflow: visible;
+}
+
+/* Navigation links in footer */
+.about {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 400;
+  position: absolute;
+  left: 465px;
+  top: 129px;
+  cursor: pointer;
+  
+}
+
+.services {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 400;
+  position: absolute;
+  left: 463px;
+  top: 166px;
+  cursor: pointer;
+  
+}
+
+
+.contact {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 400;
+  position: absolute;
+  left: 463px;
+  top: 203px;
+  cursor: pointer;
+  
+}
+
+.about:hover, .services:hover, .contact:hover {
+  color: rgba(247, 115, 115, 0.752); /* Changes color on hover */
+}
+
+/* Quick links title */
+.quick-links {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 24px;
+  line-height: 136.4%;
+  font-weight: 600;
+  position: absolute;
+  left: 458px;
+  top: 71px;
+}
+
+/* Section title for social media */
+.socials {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 24px;
+  line-height: 136.4%;
+  font-weight: 600;
+  position: absolute;
+  left: 760px;
+  top: 71px;
+}
+
+
+/* Social media platform text and email*/
+
+.facebook-email {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  left: 1141px;
+  top: 257px;
+  width: 213px;
+  cursor: pointer;
+  
+}
+
+.facebook{
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 600;
+  position: absolute;
+  left: 1144px;
+  top: 225px;
+}
+
+.email {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  left: 763px;
+  top: 251px;
+  width: 213px;
+  cursor: pointer;
+  
+}
+
+.email2 {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 600;
+  position: absolute;
+  left: 763px;
+  top: 220px;
+}
+
+.twitter-email {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  left: 1144px;
+  top: 161px;
+  width: 213px;
+  cursor: pointer;
+  
+}
+
+
+.twitter {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 600;
+  position: absolute;
+  left: 1144px;
+  top: 130px;
+}
+
+.instagram-email {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 400;
+  text-decoration: underline;
+  position: absolute;
+  left: 760px;
+  top: 166px;
+  width: 213px;
+  cursor: pointer;
+  
+}
+
+
+.instagram {
+  color: #000000;
+  text-align: left;
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 136.4%;
+  font-weight: 600;
+  position: absolute;
+  left: 763px;
+  top: 135px;
+}
+
+
+.facebook-email:hover, .email:hover, .twitter-email:hover, .instagram-email:hover {
+  color: rgb(0, 119, 255); /* Changes color on hover */
+}
+
+
+.footer-text {
+  height: auto;
+  position: absolute;
+  left: 55px;
+  top: 163px;
+  overflow: visible;
+}
+
+
+/* Footer logo style */
+.footer-logo {
+  border-radius: 50%; /* Round footer logo */
+  width: 89px;
+  height: 86px;
+  position: absolute;
+  left: 62px;
+  top: 45px;
+  object-fit: cover;
+}
+
+/*  icons for social media */
+.socmed-instagram {
+  height: auto;
+  position: absolute;
+  left: 164px;
+  top: 239.20px;
+  overflow: visible;
+  
+}
+.socmed-twitter {
+  height: auto;
+  position: absolute;
+  left: 113px;
+  top: 239px;
+  overflow: visible;
+}
+.socmed-facebook {
+  height: auto;
+  position: absolute;
+  left: 64px;
+  top: 239px;
+  overflow: visible;
+
+}

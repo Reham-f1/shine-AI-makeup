@@ -1,0 +1,176 @@
+.view-page,
+.view-page * {
+  box-sizing: border-box;
+}
+
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    background: none;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+menu, ol, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the background, height, and manage overflow for the page */
+.view-page {
+  background: #ffffff;
+  height: 1242px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.footer {
+  background: #cdc1ff;
+  width: 1440px;
+  height: 480px;
+  position: absolute;
+  left: 0px;
+  top: 762px;
+  overflow: hidden;
+}
+
+/* Footer container styles */
+.footer {
+  background: #cdc1ff;
+  width: 1570px;
+  height: 490px;
+  position: absolute;
+  left: 0px;
+  top: 762px;
+  overflow: hidden;
+}
+
+
+/* Position and dimensions for the first star image */
+.star-img {
+  width: 7.61%;
+  height: 5.82%;
+  position: absolute;
+  right: 65.22%;
+  left: 27.17%;
+  bottom: 48.61%;
+  top: 45.57%;
+  transform: translate(-72.28px, 0px);
+  overflow: visible;
+}
+
+/* Position and dimensions for the second star image */
+.star-img2 {
+  width: 3.73%;
+  height: 3.22%;
+  position: absolute;
+  right: 77.31%;
+  left: 18.96%;
+  bottom: 57.65%;
+  top: 39.13%;
+  overflow: visible;
+}
+
+/* Button styling */
+.button {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  border-style: solid;
+  border-color: var(--black, #000000);
+  border-width: 2px;
+  padding: 24px 32px 24px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 234px;
+  height: 58px;
+  position: absolute;
+  left: 635px;
+  top: 577px;
+  z-index: 1000; /* Ensures button stays on top */
+  transition: transform 0.3s ease, background-color 0.4s ease; /* Smooth animation */
+}
+
+/* Active (click) state for the button */
+.button:active {
+  background-color: rgba(233, 157, 222, 0.8); /* Changes to pinkish-purple on click */
+  transform: translateY(3px); /* Slight downward movement for visual feedback */
+}
+
+/* Button text styling */
+.view-result {
+  color: var(--black, #1a202c);
+  text-align: left;
+  font-family: Manuale-Medium, "sans-serif";
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  position: relative;
+}
+
+
+/* Style for the square container with rounded corners and spacing */
+.square {
+  background: #e5d9f2;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  padding: 54px 0px 54px 0px;
+  width: 707px;
+  height: 337px;
+  position: absolute;
+  left: 391px;
+  top: 202px;
+}
+
+
+/* Style the heading text with font, size, and opacity */
+.are-you-ready-to-see-the-final-result-if-you-are-click-the-button {
+  color: var(--black, #1a202c);
+  text-align: center;
+  font-family: Lustria-Regular, "sans-serif";
+  font-size: 24px;
+  line-height: 70px;
+  font-weight: 400;
+  opacity: 0.45;
+  position: absolute;
+  left: 0px;
+  top: 95px;
+  width: 722px;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Position and dimensions for the third star image */
+.star-img3 {
+  width: 8.05%;
+  height: 13.99%;
+  position: absolute;
+  right: 4.81%;
+  left: 87.14%;
+  bottom: 80.8%;
+  top: 5.21%;
+  overflow: visible;
+}
+
+

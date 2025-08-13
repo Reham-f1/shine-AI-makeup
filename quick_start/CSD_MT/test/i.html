@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنبؤ الصورة</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+</head>
+<body>
+    <h1>رفع صورة للتنبؤ</h1>
+    <input type="file" id="imageUpload" accept="image/*">
+    <button onclick="predict()">تنبؤ</button>
+
+    <script>
+        let model;
+
+        // تحميل النموذج المدمج داخل الكود
+        async function loadModel() {
+            model = await tf.loadLayersModel('model_tfjs/model.json'); // تأكد من تحميل النموذج بشكل غير متزامن
+            console.log("النموذج تم تحميله بنجاح!");
+        }
+
+        // دالة التنبؤ
+        async function predict() {
+            if (!model) {
+                console.log("النموذج لم يتم تحميله بعد!");
+                return;
+            }
+
+            const file = document.getElementById('imageUpload').files[0];
+            const img = new Image();
+            img.src = URL.createObjectURL(file);
+            img.onload = async () => {
+                const tensor = tf.browser.fromPixels(img)
+                    .resizeNearestNeighbor([256, 256]) // تغيير الحجم
+                    .toFloat()
+                    .expandDims(); // إضافة بعد إضافي
+                const predictions = await model.predict(tensor); // استخدام await لضمان أن الدالة تعمل بعد تحميل النموذج
+                const predictedClass = predictions.argMax(-1).dataSync()[0];
+                console.log(`فئة التنبؤ: ${predictedClass}`); // طباعة النتيجة في الكونسول
+            };
+        }
+
+        // تحميل النموذج عند تحميل الصفحة
+        loadModel(); // تحميل النموذج مباشرة عند تحميل الصفحة
+    </script>
+</body>
+</html>

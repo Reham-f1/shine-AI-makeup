@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Add favicon (logo in the browser tab) -->
+    <link rel="icon" href="shine-website-logo0.png" type="image/png">
+
+    
+<!-- Linking the CSS files -->
+<link rel="stylesheet" href="./UploadPage style-2.css">
+<link rel="stylesheet" href="./style 1.1.css">
+
+ 
+  <title>UploadPage</title>
+</head>
+<body>
+
+<!-- Main container for the upload image page -->
+<div class="upload-image-page">
+<!-- Decorative images on the page -->
+<img class="star-img" src="star-img0.svg" />
+<img class="ellipse-gray" src="ellipse-gray0.svg" />
+<img class="star-img2" src="star-img1.svg" />
+<img class="ellipse-pink" src="ellipse-pink0.svg" />
+<img class="star-img3" src="star-img2.svg" />
+
+
+
+ <!-- Navigation bar at the top -->
+ <div class="nav-bar-top">
+  <img class="shine-website-logo" src="./shine-website-logo0.png" alt="Shine Logo" />
+  <div class="shine-text">Shine</div>
+  <a href="./HomePage.php" class="home-link">
+    <div class="home-text">
+        <div class="home">Home</div>
+    </div>
+    <img class="house-line" src="./house-line0.svg" />
+</a>
+
+
+<a href="./feedback.html" class="feedback-link">
+    <div class="feedback-text">
+        <div class="feedback">feedback</div>
+    </div>
+    <img class="feedback-icon" src="./feedback-icons.svg" />
+</a>
+</div>
+
+<!-- Main section for user interactions -->
+<div class="section">
+
+
+<!-- Send button -->
+              <!-- Send button -->
+              <div class="send-button">
+                <a href="ViewPage.html" onclick="return validateBeforeSend();">
+                  <div class="send">Send</div>
+                <a>
+                 </div>
+
+
+<!-- Radio button fields -->
+<div class="radio-field">
+  <div class="checkbox-and-label">
+    <div class="radio"></div>
+    <div class="label">Label</div>
+  </div>
+</div>
+<div class="radio-field2">
+  <div class="checkbox-and-label">
+    <div class="radio"></div>
+    <div class="label">Label</div>
+  </div>
+</div>
+
+<!-- Dropdown for selecting skin tone -->
+<div class="select-skin-tone">
+  <div class="label2">Select Skin Tone:</div>
+  <div class="select-1">
+    <div class="value-1">Select</div>
+    <img class="chevron-down" src="chevron-down0.svg" />
+  </div>
+</div>
+
+<!-- Dropdown for selecting face shape -->
+<!-- Select Field Section: Dropdown to select face shape -->
+
+<div class="label-1">
+  <br />
+  Face shapes:
+</div>
+<div class="select" id="select">
+  <div class="selected-option">
+    <!-- Default selected face shape image and text -->
+    <img id="selected-shape-img" src="" alt="selected face shape" />
+    <span id="selected-shape-text">Select Face Shape</span>
+  </div>
+  <img class="chevron-down2" src="chevron-down1.svg" alt="Dropdown Icon" />
+</div>
+
+<!-- Dropdown List of Face Shapes -->
+<div class="face-shapes-options" id="face-shapes-options">
+  <!-- Each option has an image and a text for different face shapes -->
+  <div class="option">
+    <img src="Square Face.jpeg" alt="Square Face Shape" />
+    <span>Square Face Shape</span>
+  </div>
+  <div class="option">
+    <img src="Rectangle Face.jpeg" alt="Rectangle Face Shape" />
+    <span>Rectangle Face Shape</span>
+  </div>
+  <div class="option">
+    <img src="Oval Face.jpeg" alt="Oval Face Shape" />
+    <span>Oval Face Shape</span>
+  </div>
+  <div class="option">
+    <img src="Diamond Face.jpeg" alt="Diamond Face Shape" />
+    <span>Diamond Face Shape</span>
+  </div>
+  <div class="option">
+    <img src="Triangle Face.jpeg" alt="Triangle Face Shape" />
+    <span>Triangle Face Shape</span>
+  </div>
+</div>
+
+
+
+<!-- Upload outfit section -->
+<div class="upload-outfit">
+  <img class="image" src="image0.svg" />
+</div>
+<div class="upload-your-outfit">upload your outfit</div>
+
+<!-- Upload outfit section -->
+<div class="upload-outfit">
+  <img class="image" src="image0.svg" />
+</div>
+<div class="upload-your-outfit">upload your outfit</div>
+
+<div class="upload-face">
+  <!-- File upload button for face image (hidden) -->
+  <input type="file" id="face-upload" accept="image/*" style="display: none;" />
+  
+  <!-- Preview image (clickable to upload new image) -->
+  <img id="face-preview" class="preview-image" src="image0.svg" alt="Face Preview" style="cursor: pointer;"/>
+
+</div>
+<div class="upload-your-face">Upload your face</div>
+
+
+
+<!-- Alternative face shape selection text -->
+<div class="or-you-can-select-face-shape">
+  <span>
+    <span class="or-you-can-select-face-shape-span">or you can select face</span>
+    <span class="or-you-can-select-face-shape-span2">shape</span>
+  </span>
+</div>
+
+<!-- Button to continue to the next step -->
+<div class="plugin">
+  <div class="continue">continue</div>
+</div>
+
+<!-- Section for selecting makeup type -->
+<div class="select-makeup-type">Select Makeup Type</div>
+</div>
+
+<div class="footer">
+
+  <!-- Terms, privacy, and copyright information -->
+  <div class="copyright">Copyright © 2024 Shine </div>
+  <img class="line-stroke" src="./line-stroke0.svg" />
+
+  <!-- Quick links in the footer -->
+
+  <a href="./About.html">
+  <div class="about">About</div>
+  </a>
+
+  <a href="./Services.html">
+    <div class="services">Services</div>
+  </a>
+  <div class="quick-links">Quick Links</div>
+
+  <!-- Contact information and social media links -->
+  <div class="facebook-email">shineWebsite@gmail.com</div>
+  <div class="facebook">Facebook</div>
+  <div class="email">shineWebsite@gmail.com</div>
+  <div class="email2">Email</div>
+  <div class="twitter-email">shineWebsite@gmail.com</div>
+  <div class="twitter">Twitter</div>
+  <div class="instagram-email">shineWebsite@gmail.com</div>
+  <div class="instagram">Instagram</div>
+  <div class="socials">Socials</div>
+
+  <!-- Social media icons -->
+  <img class="socmed-instagram" src="./socmed-instagram0.svg" />
+  <img class="socmed-twitter" src="./socmed-twitter0.svg" />
+  <img class="socmed-facebook" src="./socmed-facebook0.svg" />
+
+  <!-- Footer logo and text -->
+  <img class="footer-text" src="./footer-text0.svg" />
+  <img class="footer-logo" src="./footer-logo0.png" />
+</div>
+</div>
+<script> 
+
+
+const fileInput = document.getElementById("face-upload");
+  const previewImg = document.getElementById("face-preview");
+
+  // Function to handle file selection and preview update
+  function previewFaceImage(event) {
+      const file = event.target.files[0];
+      if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+              previewImg.src = e.target.result; // Set the preview image to the uploaded file
+              previewImg.style.display = "block"; // Make sure the preview image is visible
+          };
+          reader.readAsDataURL(file);
+      }
+  }
+
+  // Event listener for file input change (when a user selects a new file)
+  fileInput.addEventListener("change", previewFaceImage);
+
+  // Make the preview image clickable to allow re-uploading a new image
+  previewImg.addEventListener("click", function () {
+      fileInput.value = ""; // Reset the input so the same file can be uploaded again
+      fileInput.click(); // Open the file input dialog
+  });
+
+// Function to update selected face shape image and text
+function updateFaceShape(option) {
+    const img = option.querySelector('img').src; // مصدر صورة شكل الوجه المختار
+    const text = option.querySelector('span').textContent; // نص شكل الوجه المختار
+
+    // تحديث الشكل المختار في العرض العلوي
+    const selectedImage = document.querySelector('.selected-option img');
+    const selectedText = document.querySelector('.selected-option span');
+    selectedImage.src = img;
+    selectedText.textContent = text;
+    selectedImage.style.display = 'inline';
+
+    // تحديث صورة المعاينة (preview)
+    const facePreview = document.getElementById('face-preview');
+    facePreview.src = img;
+    facePreview.style.display = 'block';
+
+    // إفراغ الحقل لمنع إرسال الصورة المرفوعة
+    const fileInput = document.getElementById('face-upload');
+    fileInput.value = ""; 
+
+    // تعيين خاصية لتمييز أن الصورة الحالية هي من اختيار شكل الوجه
+    facePreview.setAttribute('data-selected-shape', img);
+
+    // إغلاق القائمة المنسدلة
+    document.querySelector('#face-shapes-options').style.display = 'none';
+}
+
+
+// Toggle the visibility of the face shapes dropdown
+const selectField = document.querySelector('#select');
+selectField.addEventListener('click', function () {
+    const options = document.querySelector('#face-shapes-options');
+    const isVisible = options.style.display === 'block';
+    options.style.display = isVisible ? 'none' : 'block';
+});
+
+// Event listeners for selecting a face shape from the dropdown
+const faceShapeOptions = document.querySelectorAll('.option');
+faceShapeOptions.forEach(option => {
+    option.addEventListener('click', function () {
+        updateFaceShape(option);
+    });
+});
+
+// Function to map face shape text to image file name
+function mapFaceShapeToImageName(faceShapeText) {
+    const shapeMap = {
+        "Square Face Shape": "Square Face.jpeg",
+        "Rectangle Face Shape": "Rectangle Face.jpeg",
+        "Oval Face Shape": "Oval Face.jpeg",
+        "Diamond Face Shape": "Diamond Face.jpeg",
+        "Triangle Face Shape": "Triangle Face.jpeg"
+    };
+    return shapeMap[faceShapeText] || null; // Return the corresponding image name or null if not found
+}
+
+function validateBeforeSend() {
+    const faceUpload = document.getElementById('face-upload');
+    const selectedFaceShapeText = document.querySelector('.selected-option span').textContent;
+
+    // Map the selected face shape text to the corresponding image file name
+    const selectedFaceShapeFile = mapFaceShapeToImageName(selectedFaceShapeText);
+
+    // Check if either a face image is uploaded or a face shape is selected
+    if (!faceUpload.files.length && selectedFaceShapeText === 'Select Face Shape') {
+        alert('Please upload a face image or select a face shape before sending.');
+        return false; // Prevent sending
+    }
+
+
+    // If validation passes, prepare the form data
+    const formData = new FormData();
+    formData.append('imageUrl', localStorage.getItem('imageUrl')); // Append image URL
+
+    // Send only one: face image if uploaded, otherwise face shape
+    if (faceUpload.files.length) {
+        formData.append('faceUpload', faceUpload.files[0]); // Append face image
+    } else {
+        formData.append('selectedFaceShapeText', selectedFaceShapeFile); // Send face shape image name
+    }
+
+    console.log('إرسال البيانات إلى الخادم...');
+    console.log('البيانات المرسلة:', [...formData.entries()]); // Log form data correctly
+
+    // Send the data to the server
+    fetch('http://127.0.0.1:5000/process_image', {
+        method: 'POST',
+        body: formData
+    })
+    .catch(error => {
+        console.error('خطأ أثناء إرسال البيانات:', error);
+    });
+
+    return true; // Allow sending
+
+
+}
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+
+
+
+/* General Reset */
+.final-result,
+.final-result * {
+  box-sizing: border-box;
+}
+
+
+a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   /* Reset for lists */
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+
+   
+/* Final Result Container */
+.final-result {
+  background: #ffffff;
+  height: 1402px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Main Frame Styling */
+.frame-1 {
+  background: linear-gradient(
+    180deg,
+    rgba(125, 29, 228, 0.21) 0%,
+    rgba(227, 39, 186, 0.23) 50%,
+    rgba(12, 62, 133, 0.29) 100%
+  );
+  border-radius: 50px;
+  padding: 54px 0px 54px 0px;
+  width: 579px;
+  height: 382px;
+  position: absolute;
+  left: 451px;
+  top: 227.95px;
+}
+
+/* Placeholder Image */
+.image {
+  width: 100px;
+  height: 88px;
+  position: absolute;
+  left: 241px;
+  top: 147px;
+  overflow: visible;
+}
+
+/* Decorative Star Image */
+
+.star-img {
+  width: 5%;
+  height: 4.92%;
+  position: absolute;
+  right: 72.01%;
+  left: 22.99%;
+  bottom: 53.5%;
+  top: 41.58%;
+  overflow: visible;
+}
+
+/* Button 2 Styling */
+.button-2 {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  border-style: solid;
+  border-color: var(--black, #000000);
+  border-width: 2px;
+  padding: 24px 32px 24px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 234px;
+  height: 60px;
+  position: absolute;
+  left: 759px;
+  top: 644.95px;
+  transition: transform 0.3s ease, background-color 0.4s ease; /* Smooth animations */
+
+}
+
+.button-2:active {
+  background-color: rgba(233, 157, 222, 0.8); /* Feedback color */
+}
+
+/* Button 2 Text */
+.provide-feedback {
+  color: var(--black, #1a202c);
+  text-align: left;
+  font-family: Manuale-Medium, "sans-serif";
+  font-size: 20px;
+  line-height: 120%;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Button 1 Styling */
+.button-1 {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  border-style: solid;
+  border-color: var(--black, #000000);
+  border-width: 2px;
+  padding: 24px 32px 24px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 234px;
+  height: 60px;
+  position: absolute;
+  left: 496px;
+  top: 644.95px;
+  transition: transform 0.3s ease, background-color 0.4s ease; /* Smooth animations */
+}
+
+.button-1:active {
+  background-color: rgba(233, 157, 222, 0.8); /* Try Again color */
+}
+
+/* Button 1 Text */
+.try-again {
+  color: var(--black, #1a202c);
+  text-align: left;
+  font-family: Manuale-Medium, "sans-serif";
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Additional Decorative Star Image */
+.star-img2 {
+  width: 3.83%;
+  height: 3.87%;
+  position: absolute;
+  right: 23.6%;
+  left: 72.57%;
+  bottom: 83.72%;
+  top: 12.41%;
+  overflow: visible;
+}
+
+/* Final Result Text */
+.final-result2 {
+  color: var(--black, #1a202c);
+  text-align: center;
+  font-family: YoungSerif-Regular, "sans-serif";
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  position: absolute;
+  left: 545px;
+  top: 141px;
+  width: 378px;
+  height: 67px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  background: #cdc1ff;
+  width: 1540px;
+  height: 480px;
+  position: absolute;
+  left: 0px;
+  top: 922px;
+  overflow: hidden;
+}
+
+#placeholder-image {
+  width: 55%; 
+  height: auto; 
+  max-width: 800px; 
+margin-left: -110px;
+margin-top: -100px;
+border-radius: 50px;
+}
+

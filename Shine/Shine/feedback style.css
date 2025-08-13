@@ -1,0 +1,170 @@
+
+
+
+/* General Styling */
+.body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+
+}
+
+
+html, body {
+  overflow-x: hidden;  
+  width: 100%;
+}
+
+
+/* Main Title Section */
+.main-title {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #E5D9F2;
+}
+
+.main-title h1 {
+  font-size: 64px;
+  font-family: 'Tiro Bangla';
+  text-transform: capitalize;
+}
+
+.main-title p {
+  font-size: 24px;
+  margin: 20px 0;
+  opacity: 0.8;
+}
+
+.main-title button {
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: #EDF5FF;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.main-title button:hover {
+  background-color: #d5e8ff;
+}
+
+/* Feedback Section */
+.feedback-section {
+  margin: 50px auto;
+  width: 70%;
+  max-width: 800px;
+  padding: 40px;
+  background: linear-gradient(
+      180deg,
+      rgba(124, 29, 227, 0.21) 0%,
+      rgba(226, 38, 186, 0.23) 50%,
+      rgba(11, 62, 132, 0.29) 100%
+  );
+  border-radius: 50px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  margin-top: 220px;
+}
+
+.feedback-section h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feedback-section p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feedback-section input[type="text"] {
+  width: 90%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+}
+
+.feedback-section .buttons {
+  text-align: center;
+}
+
+.feedback-section .buttons button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.feedback-section .buttons .submit {
+  background-color: #d7eaec;
+}
+
+.feedback-section .buttons button:hover {
+  opacity: 0.8;
+}
+
+/* Star Ratings */
+.stars {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  font-size: 40px;
+  color: gray;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.stars input:checked ~ label {
+  color: gold;
+}
+
+/* Decorative Star Image */
+.star-img {
+  width: 7.8%;
+  height: 7.01%;
+  position: absolute;
+  right: 87.56%;
+  left: 80.63%;
+  bottom: 76.7%;
+  top: 25.3%;
+  overflow: visible;
+}
+
+/* Additional Decorative Star Image */
+.star-img2 {
+  width: 6.83%;
+  height: 3.87%;
+  position: absolute;
+  right: 87.45%;
+  left: 85.72%;
+  bottom: 72.7%;
+  top: 30.42%;
+  overflow: visible;
+}
+
+/* Footer Styling */
+.footer {
+  background: #cdc1ff;
+  width: 1583px;
+  height: 480px;
+  position: absolute;
+  left: -6px;
+  top: 832px;
+  overflow: hidden;
+}

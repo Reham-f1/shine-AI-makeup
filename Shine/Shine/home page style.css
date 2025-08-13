@@ -1,0 +1,480 @@
+/* Basic box-sizing for all elements */
+.home-page,
+.home-page * {
+  box-sizing: border-box;
+}
+
+
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    background: none;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+menu, ol, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main home page styling */
+.home-page{
+  background: #ffffff;
+  height: 2650px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section 1 styling */
+.section-1 {
+  background: #ffffff;
+  width: 1443px;
+  height: 708px;
+  position: absolute;
+  right: 0px;
+  top: 124px;
+  overflow: hidden;
+}
+
+.main-title {
+  position: absolute;
+  inset: 0;
+}
+
+/* text 2 styling */
+.text-2 {
+  color: var(--black, #1a202c);
+  text-align: center;
+  font-family: Lora-Bold,"sans-serif";
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 700;
+  opacity: 0.45;
+  position: absolute;
+  left: 82px;
+  top: 232px;
+  width: 602px;
+  height: 182px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Text 1 - Subtext inside Section 1 */
+.text-1 {
+  color: var(--black, #1a202c);
+  text-align: center;
+  font-family: YoungSerif-Regular,"sans-serif";
+  font-size: 64px;
+  line-height: 40px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  position: absolute;
+  left: 273px;
+  top: 148px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Brown rectangular shape */
+.brown-rectangle {
+  background: #d9d9d9;
+  border-radius: 40px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  padding: 0px 82px 0px 82px;
+  width: 374px;
+  height: 517px;
+  position: absolute;
+  right: 112px;
+  top: 65px;
+}
+
+/* Picture 1 inside the brown rectangle */
+.picture-1 {
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 345px;
+  height: 507px;
+  position: absolute;
+  left: 0px;
+  top: 32px;
+  object-fit: cover;
+}
+
+/* Start button styling */
+.start-button {
+  background: #e5d9f2;
+  border-radius: 999px;
+  border-style: solid;
+  border-color: var(--black, #000000);
+  border-width: 2px;
+  padding: 24px 32px 24px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 291px;
+  height: 80px;
+  position: absolute;
+  left: 210px;
+  top: 458px;
+  cursor: pointer; /* Changes the cursor to a hand when hovering */
+  transition: transform 0.3s ease, background-color 0.4s ease; /* Smooth animations */
+}
+
+/* Active state for the start button */
+.start-button:active {
+  transform: translateY(-5px); /* Moves the button up */
+  background: rgba(233, 157, 222, 0.8); /* Changes background color */
+}
+
+/* Text inside the start button */
+.get-started {
+  color: var(--black, #1a202c);
+  text-align: left;
+  font-family: Manuale-Medium,"sans-serif";
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease; /* Color transition on hover */
+}
+
+/* Change text color when button is active */
+.start-button:active .get-started {
+  color: #ffffff; /* Text turns white when button is pressed */
+}
+
+/* Vector icon inside the start button */
+.vector {
+  flex-shrink: 0;
+  width: 19px;
+  height: 18px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Vector icon  */
+.vector-3 {
+  width: 1.25%;
+  height: 2.54%;
+  position: absolute;
+  right: 5.61%;
+  left: 93.14%;
+  bottom: 15.96%;
+  top: 81.5%;
+  overflow: visible;
+}
+
+.vector-1 {
+  width: 1.59%;
+  height: 2.54%;
+  position: absolute;
+  right: 37.98%;
+  left: 60.43%;
+  bottom: 89.55%;
+  top: 7.91%;
+  overflow: visible;
+}
+
+
+.shine-website-logo {
+  border-radius: 50%;
+  width: 82px;
+  height: 77px;
+  position: absolute;
+  left: 86px;
+  top: 7px;
+  object-fit: cover;
+}
+
+
+.shine-text {
+  color: var(--black, #1a202c);
+  text-align: center;
+  font-family: Trochut-Regular,"sans-serif";
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  position: absolute;
+  left: 194px;
+  top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-block {
+  position: absolute;
+  inset: 0;
+}
+
+/* card-section - styleing*/
+.card-section {
+  padding: 0px 100px 0px 100px;
+  width: 1408px;
+  height: 424px;
+  position: absolute;
+  left: 30px;
+  top: 787px;
+}
+
+.card {
+  background: rgba(217, 217, 217, 0.46);
+  border-radius: 45px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  padding: 0px 60px 0px 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 275px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1294px;
+  height: 318px;
+  position: absolute;
+  left: 65px;
+  top: 53px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 500px;
+  height: 132px;
+  position: relative;
+}
+
+.let-s-make-things-happen {
+  color: #000000;
+  text-align: left;
+  font-family: var(--h3-font-family, SpaceGrotesk-Medium, "sans-serif");
+  font-size: var(--h3-font-size, 30px);
+  font-weight: var(--h3-font-weight, 500);
+  position: relative;
+  width: 500px;
+}
+
+.contact-us-today-to-learn-more-about-how-our-digital-marketing-services-can-help-your-business-grow-and-succeed-online {
+  color: #000000;
+  text-align: left;
+  font-family: var(--p-font-family, SpaceGrotesk-Regular, "sans-serif");
+  font-size: var(--p-font-size, 18px);
+  font-weight: var(--p-font-weight, 400);
+  position: relative;
+  width: 500px;
+}
+
+/* watching-video-buttom */
+.watching-video-button {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  border-style: solid;
+  border-color: var(--black, #000000);
+  border-width: 2px;
+  padding: 24px 32px 24px 24px;
+  flex-shrink: 0;
+  width: 372px;
+  height: 96px;
+  position: relative;
+  cursor: pointer; /* Changes the cursor to a hand when hovering */
+  transition: transform 0.3s ease, background-color 0.4s ease; /* Smooth animations */
+
+}
+
+/* Active state for the .watching-video-button */
+.watching-video-button:active {
+  transform: translateY(-5px); /* Moves the button up */
+  background: rgba(233, 157, 222, 0.8); /* Changes background color */
+
+}
+
+
+/* Text inside the watching-video button */
+.watching-video {
+  color: var(--black, #1a202c);
+  text-align: left;
+  font-family: Manuale-Medium,"sans-serif";
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  position: absolute;
+  left: 44px;
+  top: 27px;
+}
+
+/* Change text color when button is active */
+.watching-video-button:active .watching-video {
+  color: #ffffff; /* Text turns white when button is pressed */
+}
+
+.video {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 292px;
+  top: 28px;
+  overflow: visible;
+}
+
+/* Review cards container with grid layout */
+.feedback-section {
+  background: #f5efff;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  padding: 50px 107px 50px 107px;
+  width: 1170px;
+  height: 630px;
+  position: absolute;
+  left: 178px;
+  top: 1320px;
+  overflow: hidden;
+}
+
+.text-3 {
+  color: #000000;
+  text-align: center;
+  font-family: InknutAntiqua-SemiBold, "sans-serif";
+  font-size: 36px;
+  line-height: 123px;
+  font-weight: 600;
+  position: absolute;
+  left: 311px;
+  top: 0px;
+  width: 523px;
+  height: 76px;
+}
+
+.text-4 {
+  color: #212121;
+  text-align: center;
+  font-family: ImFellDoublePica-Regular, "sans-serif";
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 400;
+  position: absolute;
+  left: 318px;
+  top: 99px;
+  width: 523px;
+  height: 78px;
+}
+
+.review-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  bottom: 50;
+  padding-top: 130px;
+}
+
+/* Individual review card styles */
+.review-card {
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Adds transition effect */
+}
+
+.review-card:hover {
+  transform: translateY(-10px); /* Lifts card on hover */
+}
+
+/* Star rating styles */
+.stars {
+  font-size: 20px;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+/* Review text */
+.review-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Navigation buttons style */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.prev-btn, .next-btn {
+  background-color: #CDC1FF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: #c1c1c1; /* Changes button color on hover */
+}
+
+/* Custom background colors for specific review cards */
+.review-card:nth-child(1) {
+  background-color: #D9D9D9;
+}
+.review-card:nth-child(2) {
+  background-color: #AECEF8;
+}
+.review-card:nth-child(3) {
+  background-color: #ffbce5e5;
+}
+.review-card:nth-child(4) {
+  background-color: #C6A2EE;
+}
+.review-card:nth-child(5) {
+  background-color: #E5C6E5;
+}
+.review-card:nth-child(6) {
+  background-color: #9AE1E9;
+}
+
+/* Footer container styles */
+.footer {
+  background: #cdc1ff;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  width: 1536px;
+  height: 480px;
+  position: absolute;
+  left: 0px;
+  top: 2180px;
+  overflow: hidden;
+}

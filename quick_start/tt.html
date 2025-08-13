@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحويل المكياج</title>
+</head>
+<body>
+    <h1>تحويل المكياج باستخدام CSD-MT</h1>
+
+    <div>
+        <label for="non_makeup_image">اختر صورة بدون مكياج:</label>
+        <input type="file" id="non_makeup_image" accept="image/*">
+    </div>
+    <div>
+        <label for="makeup_image">اختر صورة مكياج:</label>
+        <input type="file" id="makeup_image" accept="image/*">
+    </div>
+    <br>
+    <button onclick="uploadImages()">تحويل المكياج!</button>
+
+    <h3>النتيجة:</h3>
+    <img id="output_image" src="" alt="النتيجة تظهر هنا" style="max-width: 100%;">
+
+    <script>
+        function uploadImages() {
+            const nonMakeupImage = document.getElementById('non_makeup_image').files[0];
+            const makeupImage = document.getElementById('makeup_image').files[0];
+
+            if (nonMakeupImage && makeupImage) {
+                const formData = new FormData();
+                formData.append('non_makeup_image', nonMakeupImage);
+                formData.append('makeup_image', makeupImage);
+
+                fetch('http://127.0.0.1:7860/upload', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const resultImage = document.getElementById('output_image');
+                    resultImage.src = data.result_image_url;  // Assuming the response contains a URL to the output image
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            } else {
+                alert('يرجى تحميل كلا الصورتين');
+            }
+        }
+    </script>
+</body>
+</html>

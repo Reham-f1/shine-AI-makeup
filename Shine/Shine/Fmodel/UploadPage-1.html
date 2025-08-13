@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../shine-website-logo0.png" type="image/png">
+    <link rel="stylesheet" href="../UploadPage style-1.css">
+    <link rel="stylesheet" href="../style 1.1.css">
+    <title>UploadPage</title>
+    <style>
+        /* Styling for the dropdown */
+      
+        .options {
+            display: none; /* Hide the dropdown options by default */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .options li {
+            padding: 10px;
+            cursor: pointer;
+            list-style-type: none;
+        }
+
+        .options li:hover {
+            background-color: #ba3caa7e;
+        }
+
+        .arrow {
+            width: 15px;
+            height: 15px;
+            margin-left: 10px;
+        }
+
+        .selected {
+            color: #000;
+        }
+
+        .options.active {
+            display: block; /* Show the dropdown when it is active */
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-image-page">
+        <img class="star-img" src="../star-img0.svg" />
+        <img class="ellipse-gray" src="../ellipse-gray0.svg" />
+        <img class="star-img2" src="../star-img1.svg" />
+        <img class="ellipse-pink" src="../ellipse-pink0.svg" />
+        <img class="star-img3" src="../star-img2.svg" />
+
+       <!-- Header: Navigation Bar -->
+    <div class="nav-bar-top">
+        <img class="shine-website-logo" src="../shine-website-logo0.png" alt="Shine Logo" />
+        <div class="shine-text">Shine</div>
+        <a href="../HomePage.php" class="home-link">
+          <div class="home-text">
+              <div class="home">Home</div>
+          </div>
+          <img class="house-line" src="../house-line0.svg" />
+      </a>
+      
+  
+      <a href="../feedback.html" class="feedback-link">
+          <div class="feedback-text">
+              <div class="feedback">feedback</div>
+          </div>
+          <img class="feedback-icon" src="../feedback-icons.svg" />
+      </a>
+      </div>
+
+        <div class="section">
+            <div class="select-makeup-type">Select Makeup Type</div>
+            <div class="radio-field">
+                <label class="checkbox-and-label">
+                    <input type="radio" name="makeup-type" value="natural" />
+                    <span>Natural</span>
+                </label>
+            </div>
+            <div class="radio-field2">
+                <label class="checkbox-and-label">
+                    <input type="radio" name="makeup-type" value="bold" />
+                    <span>Bold</span>
+                </label>
+            </div>
+
+            <div class="select-skin-tone">
+                <label class="label-1" for="skin-tone-select">Skin Tone:</label>
+                <div class="select-1" id="skin-tone-select">
+                    <div class="value" id="skin-tone-label">Select Skin Tone</div>
+                    <img src="../chevron-down1.svg" alt="Arrow" class="arrow" />
+                </div>
+                <!-- Skin Tone Options -->
+                <ul class="options">
+                    <li data-value="fair">Fair</li>
+                    <li data-value="medium">Medium</li>
+                    <li data-value="dark">Dark</li>
+                </ul>
+            </div>
+
+            <div class="upload-outfit">
+                <!-- File upload button for outfit image (hidden) -->
+                <input type="file" id="imageUpload" accept="image/*" style="display: none;" onchange="imageSelected()" />
+                
+                <!-- Preview image (clickable to upload new outfit image) -->
+                <img id="outfit-preview" class="preview-image" src="../image1.svg" alt="Outfit Preview" style="cursor: pointer;" />
+            </div>
+            <div class="upload-your-outfit">Upload your outfit</div>
+
+            <div class="plugin">
+               
+                    <div class="continue" onclick="submitForm()">Continue</div>
+                </a>
+            </div>
+
+
+            <div class="send-button">
+                <div class="send" >Send</div>
+            </div>
+
+            <div class="upload-face">
+                <img class="image2" src="../image1.svg" />
+            </div>
+            <div class="upload-your-face">Upload your face</div>
+
+            <div class="or-you-can-select-face-shape">Or you can select face shape</div>
+
+            <div id="result"></div>
+        </div>
+
+        <div class="footer">
+
+            <!-- Terms, privacy, and copyright information -->
+            <div class="copyright">Copyright © 2024 Shine </div>
+            <img class="line-stroke" src="../line-stroke0.svg" />
+      
+            <!-- Quick links in the footer -->
+      
+            <a href="../About.html">
+            <div class="about">About</div>
+            </a>
+          
+            <a href="../Services.html">
+              <div class="services">Services</div>
+            </a>
+            <div class="quick-links">Quick Links</div>
+      
+            <!-- Contact information and social media links -->
+            <div class="facebook-email">shineWebsite@gmail.com</div>
+            <div class="facebook">Facebook</div>
+            <div class="email">shineWebsite@gmail.com</div>
+            <div class="email2">Email</div>
+            <div class="twitter-email">shineWebsite@gmail.com</div>
+            <div class="twitter">Twitter</div>
+            <div class="instagram-email">shineWebsite@gmail.com</div>
+            <div class="instagram">Instagram</div>
+            <div class="socials">Socials</div>
+      
+            <!-- Social media icons -->
+            <img class="socmed-instagram" src="../socmed-instagram0.svg" />
+            <img class="socmed-twitter" src="../socmed-twitter0.svg" />
+            <img class="socmed-facebook" src="../socmed-facebook0.svg" />
+      
+            <!-- Footer logo and text -->
+            <img class="footer-text" src="../footer-text0.svg" />
+            <img class="footer-logo" src="../footer-logo0.png" />
+          </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script>
+        const outfitFileInput = document.getElementById("imageUpload");
+  const outfitPreviewImg = document.getElementById("outfit-preview");
+
+  // Function to handle file selection and preview update
+  function imageSelected() {
+      const file = outfitFileInput.files[0];
+      if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+              outfitPreviewImg.src = e.target.result; // Set the preview image to the uploaded file
+              outfitPreviewImg.style.display = "block"; // Make sure the preview image is visible
+          };
+          reader.readAsDataURL(file);
+      }
+  }
+
+  // Make the preview image clickable to allow re-uploading a new outfit image
+  outfitPreviewImg.addEventListener("click", function () {
+      outfitFileInput.value = ""; // Reset the input so the same file can be uploaded again
+      outfitFileInput.click(); // Open the file input dialog
+  });
+
+
+
+
+        let model;
+        let predictedClass = null;
+        // تحميل النموذج
+        async function loadModel() {
+            try {
+                model = await tf.loadLayersModel('model_tfjs/model.json');
+                console.log("Model loaded successfully!");
+            } catch (error) {
+                console.error("Error loading model: ", error);
+            }
+        }
+
+        // دالة التنبؤ
+        async function predict() {
+    const file = document.getElementById('imageUpload').files[0];
+    if (!file) {
+        console.log("No image selected!");
+        return;
+    }
+
+    const img = new Image();
+    img.src = URL.createObjectURL(file);
+    img.onload = async () => {
+        const tensor = tf.browser.fromPixels(img)
+            .resizeNearestNeighbor([256, 256]) // تغيير الحجم
+            .toFloat()
+            .expandDims(); // إضافة بعد إضافي
+        const predictions = await model.predict(tensor);
+        predictedClass = predictions.argMax(-1).dataSync()[0]; // تخزين التنبؤ في المتغير العام
+        console.log(`Predicted Class: ${predictedClass}`);
+    };
+}
+
+
+        // AMCT function
+        function AMCT(numOfColor, skinTone, makeupType) { 
+            const images = {
+                1: { // Black 
+                    fair: {
+                        bold: ['1-fair-bold(1).jpg', '1-fair-bold(2).jpg'],
+                        natural: ['1-fair-natural(1).jpg', '1-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['1-medium-bold(1).jpg', '1-medium-bold(2).jpg'],
+                        natural: ['1-medium-natural(1).jpg', '1-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['1-dark-bold(1).jpg', '1-dark-bold(2).jpg'],
+                        natural: ['1-dark-natural(1).jpg', '1-dark-natural(2).jpg']
+                    }
+                },
+                2: { // Blue
+                    fair: {
+                        bold: ['2-fair-bold(1).jpg', '2-fair-bold(2).jpg'],
+                        natural: ['2-fair-natural(1).jpg', '2-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['2-medium-bold(1).jpg', '2-medium-bold(2).jpg'],
+                        natural: ['2-medium-natural(1).jpg', '2-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['2-dark-bold(1).jpg', '2-dark-bold(2).jpg'],
+                        natural: ['2-dark-natural(1).jpg', '2-dark-natural(2).jpg']
+                    }
+                },
+                3: { // Brown
+                    fair: {
+                        bold: ['3-fair-bold(1).jpg', '3-fair-bold(2).jpg'],
+                        natural: ['3-fair-natural(1).jpg', '3-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['3-medium-bold(1).jpg', '3-medium-bold(2).jpg'],
+                        natural: ['3-medium-natural(1).jpg', '3-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['3-dark-bold(1).jpg', '3-dark-bold(2).jpg'],
+                        natural: ['3-dark-natural(1).jpg', '3-dark-natural(2).jpg']
+                    }
+                },
+                4: { // Gray
+                    fair: {
+                        bold: ['4-fair-bold(1).jpg', '4-fair-bold(2).jpg'],
+                        natural: ['4-fair-natural(1).jpg', '4-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['4-medium-bold(1).jpg', '4-medium-bold(2).jpg'],
+                        natural: ['4-medium-natural(1).jpg', '4-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['4-dark-bold(1).jpg', '4-dark-bold(2).jpg'],
+                        natural: ['4-dark-natural(1).jpg', '4-dark-natural(2).jpg']
+                    }
+                },
+                5: { // Green
+                    fair: {
+                        bold: ['5-fair-bold(1).jpg', '5-fair-bold(2).jpg'],
+                        natural: ['5-fair-natural(1).jpg', '5-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['5-medium-bold(1).jpg', '5-medium-bold(2).jpg'],
+                        natural: ['5-medium-natural(1).jpg', '5-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['5-dark-bold(1).jpg', '5-dark-bold(2).jpg'],
+                        natural: ['5-dark-natural(1).jpg', '5-dark-natural(2).jpg']
+                    }
+                },
+                6: { // Orange
+                    fair: {
+                        bold: ['6-fair-bold(1).jpg', '6-fair-bold(2).jpg'],
+                        natural: ['6-fair-natural(1).jpg', '6-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['6-medium-bold(1).jpg', '6-medium-bold(2).jpg'],
+                        natural: ['6-medium-natural(1).jpg', '6-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['6-dark-bold(1).jpg', '6-dark-bold(2).jpg'],
+                        natural: ['6-dark-natural(1).jpg', '6-dark-natural(2).jpg']
+                    }
+                },
+                7: { // Purple
+                    fair: {
+                        bold: ['7-fair-bold(1).jpg', '7-fair-bold(2).jpg'],
+                        natural: ['7-fair-natural(1).jpg', '7-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['7-medium-bold(1).jpg', '7-medium-bold(2).jpg'],
+                        natural: ['7-medium-natural(1).jpg', '7-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['7-dark-bold(1).jpg', '7-dark-bold(2).jpg'],
+                        natural: ['7-dark-natural(1).jpg', '7-dark-natural(2).jpg']
+                    }
+                },
+                8: { // Red 
+                    fair: {
+                        bold: ['8-fair-bold(1).jpg', '8-fair-bold(2).jpg'],
+                        natural: ['8-fair-natural(1).jpg', '8-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['8-medium-bold(1).jpg', '8-medium-bold(2).jpg'],
+                        natural: ['8-medium-natural(1).jpg', '8-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['8-dark-bold(1).jpg', '8-dark-bold(2).jpg'],
+                        natural: ['8-dark-natural(1).jpg', '8-dark-natural(2).jpg']
+                    }
+                },
+                9: { // White 
+                    fair: {
+                        bold: ['9-fair-bold(1).jpg', '9-fair-bold(2).jpg'],
+                        natural: ['9-fair-natural(1).jpg', '9-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['9-medium-bold(1).jpg', '9-medium-bold(2).jpg'],
+                        natural: ['9-medium-natural(1).jpg', '9-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['9-dark-bold(1).jpg', '9-dark-bold(2).jpg'],
+                        natural: ['9-dark-natural(1).jpg', '9-dark-natural(2).jpg']
+                    }
+                },
+                10: { // Yellow
+                    fair: {
+                        bold: ['10-fair-bold(1).jpg', '10-fair-bold(2).jpg'],
+                        natural: ['10-fair-natural(1).jpg', '10-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['10-medium-bold(1).jpg', '10-medium-bold(2).jpg'],
+                        natural: ['10-medium-natural(1).jpg', '10-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['10-dark-bold(1).jpg', '10-dark-bold(2).jpg'],
+                        natural: ['10-dark-natural(1).jpg', '10-dark-natural(2).jpg']
+                    }
+                },
+                // Add similar structure for colors 3 to 10...
+            };
+           
+
+            const colorImages = images[numOfColor]?.[skinTone]?.[makeupType];
+            return colorImages 
+                ? colorImages[Math.floor(Math.random() * colorImages.length)] 
+                : 'No images found';
+        }
+
+        // دالة يتم استدعاؤها عند اختيار صورة
+        function imageSelected() {
+            loadModel().then(() => {
+                predict(); // التنبؤ بعد تحميل النموذج
+            });
+        }
+
+        // Event listener for selecting skin tone
+        const skinToneSelect = document.getElementById('skin-tone-select');
+        const optionsList = document.querySelector('.options');
+        let selectedSkinTone = '';
+        let selectedMakeupType = '';
+
+        skinToneSelect.addEventListener('click', () => {
+            optionsList.classList.toggle('active'); // Toggle the dropdown
+        });
+
+        // Add event listener to each option
+        document.querySelectorAll('.options li').forEach(option => {
+            option.addEventListener('click', function () {
+                selectedSkinTone = this.textContent.trim();
+                document.getElementById('skin-tone-label').textContent = selectedSkinTone;
+
+                // Mark the selected option
+                document.querySelectorAll('.options li').forEach(item => item.classList.remove('selected'));
+                this.classList.add('selected');
+
+                optionsList.classList.remove('active'); // Close the dropdown after selection
+            });
+        });
+
+        // Event listeners for makeup type radio buttons
+        document.querySelectorAll('input[name="makeup-type"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                selectedMakeupType = this.value;
+            });
+        });
+
+        // Function to handle form submission
+        function submitForm() {
+    if (!selectedSkinTone || !selectedMakeupType) {
+        alert('Please select both skin tone and makeup type.');
+        return;
+    }
+
+    // طباعة القيم للتأكد من صحتها
+    console.log(`Selected Skin Tone: ${selectedSkinTone}`);
+    console.log(`Selected Makeup Type: ${selectedMakeupType}`);
+    console.log(`Predicted Class: ${predictedClass}`);
+
+    if (predictedClass === null) {
+        alert('Please upload an image and let the model predict first.');
+        return;
+    }
+
+    // Call the AMCT function with selected values
+    const numOfColor = predictedClass; // استخدام predictedClass هنا
+    const imageUrl = AMCT(numOfColor, selectedSkinTone.toLowerCase(), selectedMakeupType);
+
+    console.log(`Generated Image Path: ${imageUrl}`);
+
+    // إذا لم يتم العثور على صورة، عرض رسالة خطأ بدون إظهار المسار
+    if (imageUrl !== 'No images found') {
+        document.getElementById('result').innerHTML = ``;
+    } else {
+        // عرض رسالة خطأ بدلاً من المسار
+        document.getElementById('result').innerHTML = `<p class="error"> Error: No outfit image found for the selected color and makeup type.</p>`;
+    }
+    localStorage.setItem('imageUrl', imageUrl);
+    window.location.href = '../UploadPage-2.html';
+}
+
+        // Initialize the model
+        loadModel();
+
+        // Function to preview selected image for both face and outfit uploads
+    function previewImage(inputElement, previewElementId) {
+    const file = inputElement.files[0]; // Get the selected file
+    if (file) {
+        const reader = new FileReader(); // Create a FileReader object
+        reader.onload = function (e) {
+            const preview = document.getElementById(previewElementId); // Get the preview element
+            preview.src = e.target.result; // Set the source of the preview image
+            preview.style.display = 'block'; // Show the preview image
+        };
+        reader.readAsDataURL(file); // Read the file as Data URL
+    }
+}
+// Event listener for face upload
+document.getElementById("imageUpload").addEventListener("change", function () {
+    previewImage(this, "outfit-preview");
+});
+
+
+
+
+
+    </script>
+</body>
+</html>

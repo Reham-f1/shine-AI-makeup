@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMCT Function Tester</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        img {
+            max-width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AMCT Image Generator</h1>
+        <label for="color">Enter Color Number (1-10):</label>
+        <input type="number" id="color" placeholder="Enter a number between 1 and 10" min="0" max="10">
+        
+        <label for="skinTone">Select Skin Tone:</label>
+        <select id="skinTone">
+            <option value="fair">Fair</option>
+            <option value="medium">Medium</option>
+            <option value="dark">Dark</option>
+        </select>
+        
+        <label for="makeupType">Select Makeup Type:</label>
+        <select id="makeupType">
+            <option value="bold">Bold</option>
+            <option value="natural">Natural</option>
+        </select>
+        
+        <button onclick="handleGenerate()">Generate Image</button>
+        
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        // AMCT function definition
+        function AMCT(numOfColor, skinTone, makeupType) {
+            const images = {
+                1: { // Black 
+                    fair: {
+                        bold: ['1-fair-bold(1).jpg', '1-fair-bold(2).jpg'],
+                        natural: ['1-fair-natural(1).jpg', '1-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['1-medium-bold(1).jpg', '1-medium-bold(2).jpg'],
+                        natural: ['1-medium-natural(1).jpg', '1-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['1-dark-bold(1).jpg', '1-dark-bold(2).jpg'],
+                        natural: ['1-dark-natural(1).jpg', '1-dark-natural(2).jpg']
+                    }
+                },
+                2: { // Blue
+                    fair: {
+                        bold: ['2-fair-bold(1).jpg', '2-fair-bold(2).jpg'],
+                        natural: ['2-fair-natural(1).jpg', '2-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['2-medium-bold(1).jpg', '2-medium-bold(2).jpg'],
+                        natural: ['2-medium-natural(1).jpg', '2-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['2-dark-bold(1).jpg', '2-dark-bold(2).jpg'],
+                        natural: ['2-dark-natural(1).jpg', '2-dark-natural(2).jpg']
+                    }
+                },
+                3: { // Brown
+                    fair: {
+                        bold: ['3-fair-bold(1).jpg', '3-fair-bold(2).jpg'],
+                        natural: ['3-fair-natural(1).jpg', '3-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['3-medium-bold(1).jpg', '3-medium-bold(2).jpg'],
+                        natural: ['3-medium-natural(1).jpg', '3-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['3-dark-bold(1).jpg', '3-dark-bold(2).jpg'],
+                        natural: ['3-dark-natural(1).jpg', '3-dark-natural(2).jpg']
+                    }
+                },
+                4: { // Gray
+                    fair: {
+                        bold: ['4-fair-bold(1).jpg', '4-fair-bold(2).jpg'],
+                        natural: ['4-fair-natural(1).jpg', '4-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['4-medium-bold(1).jpg', '4-medium-bold(2).jpg'],
+                        natural: ['4-medium-natural(1).jpg', '4-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['4-dark-bold(1).jpg', '4-dark-bold(2).jpg'],
+                        natural: ['4-dark-natural(1).jpg', '4-dark-natural(2).jpg']
+                    }
+                },
+                5: { // Green
+                    fair: {
+                        bold: ['5-fair-bold(1).jpg', '5-fair-bold(2).jpg'],
+                        natural: ['5-fair-natural(1).jpg', '5-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['5-medium-bold(1).jpg', '5-medium-bold(2).jpg'],
+                        natural: ['5-medium-natural(1).jpg', '5-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['5-dark-bold(1).jpg', '5-dark-bold(2).jpg'],
+                        natural: ['5-dark-natural(1).jpg', '5-dark-natural(2).jpg']
+                    }
+                },
+                6: { // Orange
+                    fair: {
+                        bold: ['6-fair-bold(1).jpg', '6-fair-bold(2).jpg'],
+                        natural: ['6-fair-natural(1).jpg', '6-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['6-medium-bold(1).jpg', '6-medium-bold(2).jpg'],
+                        natural: ['6-medium-natural(1).jpg', '6-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['6-dark-bold(1).jpg', '6-dark-bold(2).jpg'],
+                        natural: ['6-dark-natural(1).jpg', '6-dark-natural(2).jpg']
+                    }
+                },
+                7: { // Purple
+                    fair: {
+                        bold: ['7-fair-bold(1).jpg', '7-fair-bold(2).jpg'],
+                        natural: ['7-fair-natural(1).jpg', '7-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['7-medium-bold(1).jpg', '7-medium-bold(2).jpg'],
+                        natural: ['7-medium-natural(1).jpg', '7-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['7-dark-bold(1).jpg', '7-dark-bold(2).jpg'],
+                        natural: ['7-dark-natural(1).jpg', '7-dark-natural(2).jpg']
+                    }
+                },
+                8: { // Red 
+                    fair: {
+                        bold: ['8-fair-bold(1).jpg', '8-fair-bold(2).jpg'],
+                        natural: ['8-fair-natural(1).jpg', '8-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['8-medium-bold(1).jpg', '8-medium-bold(2).jpg'],
+                        natural: ['8-medium-natural(1).jpg', '8-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['8-dark-bold(1).jpg', '8-dark-bold(2).jpg'],
+                        natural: ['8-dark-natural(1).jpg', '8-dark-natural(2).jpg']
+                    }
+                },
+                9: { // White 
+                    fair: {
+                        bold: ['9-fair-bold(1).jpg', '9-fair-bold(2).jpg'],
+                        natural: ['9-fair-natural(1).jpg', '9-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['9-medium-bold(1).jpg', '9-medium-bold(2).jpg'],
+                        natural: ['9-medium-natural(1).jpg', '9-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['9-dark-bold(1).jpg', '9-dark-bold(2).jpg'],
+                        natural: ['9-dark-natural(1).jpg', '9-dark-natural(2).jpg']
+                    }
+                },
+                10: { // Yellow
+                    fair: {
+                        bold: ['10-fair-bold(1).jpg', '10-fair-bold(2).jpg'],
+                        natural: ['10-fair-natural(1).jpg', '10-fair-natural(2).jpg']
+                    },
+                    medium: {
+                        bold: ['10-medium-bold(1).jpg', '10-medium-bold(2).jpg'],
+                        natural: ['10-medium-natural(1).jpg', '10-medium-natural(2).jpg']
+                    },
+                    dark: {
+                        bold: ['10-dark-bold(1).jpg', '10-dark-bold(2).jpg'],
+                        natural: ['10-dark-natural(1).jpg', '10-dark-natural(2).jpg']
+                    }
+                },
+                // Add similar structure for colors 3 to 10...
+            };
+
+            const colorImages = images[numOfColor]?.[skinTone]?.[makeupType];
+            return colorImages 
+                ? colorImages[Math.floor(Math.random() * colorImages.length)] 
+                : 'No images found';
+        }
+
+        // Event handler for generating an image
+        function handleGenerate() {
+            const color = parseInt(document.getElementById('color').value);
+            const skinTone = document.getElementById('skinTone').value;
+            const makeupType = document.getElementById('makeupType').value;
+            const resultDiv = document.getElementById('result');
+
+            // Reset result div
+            resultDiv.innerHTML = '';
+
+            // Validate input
+            if (isNaN(color) || color < 1 || color > 10) {
+                resultDiv.innerHTML = '<p class="error">Error: You have uploaded the wrong image of the clothes, please re-upload. </p>';
+                return;
+            }
+
+            // Call AMCT and display the result
+            const imageUrl = AMCT(color, skinTone, makeupType);
+            if (imageUrl === 'No images found') {
+                resultDiv.innerHTML = '<p class="error">Error:  No images found for the selected color and makeup type </p>';
+            } else {
+                resultDiv.innerHTML = `<p>Generated Image:</p><img src="${imageUrl}" alt="Generated Makeup Image">`;
+            }
+        }
+    </script>
+</body>
+</html>

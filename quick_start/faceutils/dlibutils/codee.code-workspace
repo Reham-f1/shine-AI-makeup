@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "javajam5",
+			"path": "../../../Desktop/javajam5"
+		},
+		{
+			"name": "newP",
+			"path": "../../../../../xampp/htdocs/newP"
+		},
+		{
+			"path": "../../../Desktop/PROg"
+		},
+		{
+			"path": "../../../../../xampp/htdocs/proA"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PROg"
+	}
+}
