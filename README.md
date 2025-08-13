@@ -1,10 +1,10 @@
 # AI Based Makeup Recommendation and Application for Women
-
-**AI Based Makeup Recommendation and Application for Women** is an innovative and privacy-respecting project built specifically for female users. The system recommends and virtually applies makeup based on the user's clothing color, skin tone, and makeup style preference. To protect user privacy, it allows users to either upload a real face image or choose from preset face shapes.
+## 📌 Overview
+An innovative and privacy-respecting project built specifically for female users. The system recommends and virtually applies makeup based on the user's clothing color, skin tone, and makeup style preference. To protect user privacy, it allows users to either upload a real face image or choose from preset face shapes.
 
 ---
 
-## 📌 Features
+## ✨ Features
 
 - Detects clothing color from uploaded outfit images.
 - Accepts skin tone and makeup style preference (Natural or Bold).
@@ -37,12 +37,24 @@
 
 ---
 
+## 🎯 AI Models used 
+
+1. **Custom Outfit Color Extraction Model**
+
+2. **Makeup Transfer Model (CSD-MT)**
+
+   Based on the Content-Style Decoupled Makeup Transfer algorithm.  
+   **Source**: [CSD-MT GitHub Repository](#)
+
+3. **AMCT (Analyze Makeup Color Template)**
+
+   Custom internal algorithm that combines clothing color + skin tone + makeup type to select the best template.
+
+
 ## ⚙️ Local Setup Instructions
 
-### Step-by-step Setup
-
 1. **Install Anaconda**  
-   [Download Anaconda](https://www.anaconda.com/products/distribution) and install it.
+   Download Anaconda and install it if you don't have it.
 
 2. **Open Anaconda Prompt**  
    Navigate to your project directory:
