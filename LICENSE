@@ -1,5 +1,4 @@
 This project uses the model described in the paper:
 "Content-Style Decoupling for Unsupervised Makeup Transfer without Generating Pseudo Ground Truth" (Sun et al., 2024).
 The model is open source and can be accessed under an open-source license.
-
 This model is integrated into the project for the task of makeup transfer without the need for pseudo ground truth data.
