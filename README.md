@@ -44,7 +44,7 @@ An innovative and privacy-respecting project built specifically for female users
 2. **Makeup Transfer Model (CSD-MT)**
 
    Based on the Content-Style Decoupled Makeup Transfer algorithm.  
-   **Source**: [CSD-MT GitHub Repository](#)
+   **Source**: [CSD-MT GitHub Repository](https://github.com/Snowfallingplum/CSD-MT/tree/main/quick_start)
 
 3. **AMCT (Analyze Makeup Color Template)**
 
