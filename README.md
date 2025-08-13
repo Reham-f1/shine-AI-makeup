@@ -150,9 +150,9 @@ Women who value **privacy** and want **AI-powered smart makeup recommendations**
 This project is a collaborative work by:
 
 - **Reham Al-Otaibi**
-- **Lina Al-Jaed**
+- **Lana aljuaid**
 - **Fatimah Al-Zahrani**
-- **Asma'a Al-Asmari**
+- **Asma Al-Asmari**
 
 
 
