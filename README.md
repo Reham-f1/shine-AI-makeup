@@ -142,3 +142,17 @@
 ## 🧡 Ideal For
 
 Women who value **privacy** and want **AI-powered smart makeup recommendations** tailored to their outfit, skin tone, and personal style.
+
+---
+
+## Contributors
+
+This project is a collaborative work by:
+
+- **Reham Al-Otaibi**
+- **Lina Al-Jaed**
+- **Fatimah Al-Zahrani**
+- **Asma'a Al-Asmari**
+
+
+
